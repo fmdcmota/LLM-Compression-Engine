@@ -7,9 +7,20 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
+                "-w",
+                "-fopenmp",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I${workspaceFolder}/llama.cpp/include",
+                "-I${workspaceFolder}/llama.cpp/ggml/include",
+                "${workspaceFolder}/llama.cpp/build-linux/src/libllama.a",
+                "${workspaceFolder}/llama.cpp/build-linux/ggml/src/libggml.a",
+                "${workspaceFolder}/llama.cpp/build-linux/ggml/src/libggml-cpu.a",
+                "${workspaceFolder}/llama.cpp/build-linux/ggml/src/libggml-base.a",
+                "-lpthread",
+                "-lm",
+                "-ldl"
             ],
             "options": {
                 "cwd": "${fileDirname}"

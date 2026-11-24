@@ -14,14 +14,23 @@ The current best algorithm (1st winner of the Huffer Prize) is Vladimir Ivanov's
 
 TODO:
  - Write base architecture
- - Find LLM to base model on
+ - Work on LLM interface
+    -  How do we extract probabilities and in order to rank them
 
 Notes
----
+___
 
 Quantization - cuts memory usage with minimal quality loss
  - This will be necessary, as we want to run larger parameter models in order to improve compression [source] without making the compressing software extremely slow. Initially the model will have to run on my AMD Ryzen 9HX 370
 
-llama.cpp will be used to run the 
-
+llama.cpp will be used to run the models
  - We will contain our model to use .gguf 
+
+Currently basing my method off of LLMZip > [1] https://arxiv.org/pdf/2306.04050 
+
+___
+<h1> Curiosities </h1>
+
+*How does **M** [1] size affect compression ratio*
+
+

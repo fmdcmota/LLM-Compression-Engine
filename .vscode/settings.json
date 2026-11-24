@@ -1,0 +1,8 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}/llama.cpp",
+    "cmake.buildDirectory": "${workspaceFolder}/llama.cpp/build-linux",
+    "cmake.configureSettings": {
+        "BUILD_SHARED_LIBS": "OFF",
+        "LLAMA_CURL": "OFF"
+    }
+}
