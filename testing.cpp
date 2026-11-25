@@ -15,7 +15,7 @@
 #include <vector>
 
 struct Options {
-    std::string model_path = "models/tinyllama-15M-stories-Q3_K_M.gguf";
+    std::string model_path = "models/Qwen3.8-9B-Q4_K_M.gguf";
     std::string prompt;
     int         n_predict  = 128;
     float       temp       = 0.0f;
@@ -131,6 +131,7 @@ static bool generate(llama_context * ctx, const llama_vocab * vocab, llama_sampl
 
 int main(int argc, char ** argv) {
     Options opt;
+
     if (!parse_args(argc, argv, opt)) {
         usage(argv[0]);
         return 1;
